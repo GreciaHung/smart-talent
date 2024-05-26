@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Editar Producto</h2>
+<mat-dialog-content>
+  <form [formGroup]="editForm">
+    <mat-form-field>
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" formControlName="price" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Imagen</mat-label>
+      <input matInput type="url" formControlName="imgUrl"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Rating</mat-label>
+      <input matInput type="number" formControlName="rating" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Stock</mat-label>
+      <input matInput type="number" formControlName="stock" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Categoría</mat-label>
+      <mat-select formControlName="category">
+        <mat-option value="vegetable">Verdura</mat-option>
+        <mat-option value="fruit">Fruta</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Descripcion</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="editForm.value" cdkFocusInitial>
+    Guardar
+  </button>
+</mat-dialog-actions>

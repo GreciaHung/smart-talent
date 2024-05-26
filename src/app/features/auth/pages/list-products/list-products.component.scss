@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  padding: 0 200px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: -webkit-fill-available;
+}
+
+.search-form-field {
+  width: 80%;
+}
+
+.button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}

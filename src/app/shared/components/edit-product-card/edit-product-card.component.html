@@ -1,0 +1,69 @@
+<div class="product">
+  <div class="product__container">
+    <div class="product__container__image">
+      <img
+        class="product__image-responsive"
+        [src]="productCart.product.imgUrl"
+        [alt]="productCart.product.name"
+      />
+    </div>
+    <div class="product__container__info">
+      <div class="product__container__info__header">
+        <h1 class="product__container__info__header__title">
+          {{ productCart.product.name }}
+        </h1>
+        <span class="product__container__info__header__category">{{
+          productCart.product.category
+        }}</span>
+      </div>
+      <div class="product__container__info__actions">
+        <a
+          [routerLink]="['/view-product/' + productCart.product.id]"
+          class="product__container__info__actions__button"
+        >
+          Ver
+        </a>
+        <a
+          (click)="openEditModal(productCart.product)"
+          class="product__container__info__actions__button"
+        >
+          Editar
+        </a>
+        <a
+          (click)="deleteProductConfirm()"
+          class="product__container__info__actions__button"
+        >
+          Eliminar
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="product__stock">
+    <span class="product__stock__availability">
+      {{ productCart.quantity }} Unidades
+    </span>
+    <div class="product__stock__price">
+      <div class="product__stock__price__discount">
+        <span class="product__stock__price__discount__percentage">
+          {{
+            productCart.product.priceBeforeDiscount
+              ? (productCart.product.priceBeforeDiscount
+                | discountPercentage : productCart.product.price)
+              : "N/A"
+          }}
+          OFF</span
+        >
+        <span class="product__stock__price__discount__old-price"
+          >$ {{ productCart.product.priceBeforeDiscount }}</span
+        >
+      </div>
+      <h1 class="product__stock__price__current-price">
+        $ {{ productCart.product.price }}
+      </h1>
+    </div>
+  </div>
+  <div class="product__shipping">
+    <span class="product__shipping__label">Envío</span>
+    <span class="product__shipping__value">Gratis</span>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  padding: 0 200px;
+}
+
+.search-form-field {
+  width: 100%;
+}
+
+.button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.product-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
