@@ -1,0 +1,12 @@
+@import "../../../../../assets/scss/variables.scss";
+
+@include respond-to($small-screen) {
+  mat-form-field {
+    width: 100%;
+  }
+  mat-dialog-actions {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}

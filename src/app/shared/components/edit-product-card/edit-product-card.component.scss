@@ -1,3 +1,4 @@
+@import "../../../../assets/scss/variables.scss";
 .product {
   background: white;
 
@@ -90,4 +91,14 @@
       color: #00a650;
     }
   }
+}
+
+
+
+@include respond-to($small-screen) {
+.product{
+  &.container{
+    flex-direction: column;
+  }
+}
 }

@@ -1,3 +1,5 @@
+@import '../../../../../assets/scss/variables.scss';
+
 :host {
   padding: 0 200px;
   display: block;
@@ -44,5 +46,17 @@
   }
   &__button {
     width: 100%;
+  }
+}
+
+@include respond-to($small-screen) {
+  :host {
+    padding: 20px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .summary {
+    width: auto;
   }
 }

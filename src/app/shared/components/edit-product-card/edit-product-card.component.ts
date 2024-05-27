@@ -31,6 +31,8 @@ import { DiscountPercentagePipe } from '../../pipes/discount-percentage-pipe.pip
 export class EditProductCardComponent {
   @Input()
   productCart: ProductCart = {} as ProductCart;
+  @Input()
+  isAdmin = false;
   @Output()
   deleteProduct = new EventEmitter<string>();
 

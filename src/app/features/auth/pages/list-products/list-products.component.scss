@@ -1,3 +1,6 @@
+
+@import'../../../../../assets/scss/variables.scss';
+
 :host {
   display: block;
   padding: 0 200px;
@@ -25,4 +28,10 @@
   bottom: 20px;
   right: 20px;
   z-index: 100;
+}
+
+@include respond-to($small-screen) {
+  :host {
+    padding: 20px;
+  }
 }

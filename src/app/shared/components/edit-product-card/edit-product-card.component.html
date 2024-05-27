@@ -23,12 +23,14 @@
         >
           Ver
         </a>
+        @if (isAdmin) {
         <a
           (click)="openEditModal(productCart.product)"
           class="product__container__info__actions__button"
         >
           Editar
         </a>
+        }
         <a
           (click)="deleteProductConfirm()"
           class="product__container__info__actions__button"
@@ -40,7 +42,7 @@
   </div>
   <div class="product__stock">
     <span class="product__stock__availability">
-      {{ productCart.quantity }} Unidades
+      {{ productCart.product.stock }} Unidades
     </span>
     <div class="product__stock__price">
       <div class="product__stock__price__discount">
