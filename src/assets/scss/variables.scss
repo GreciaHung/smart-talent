@@ -1,10 +1,10 @@
-$small-screen: 375px;
+$small-screen: 576px;
 $medium-screen: 768px;
 $large-screen: 992px;
 $xlarge-screen: 1200px;
 
 @mixin respond-to($breakpoint) {
-  @media screen and (min-width: $breakpoint) {
+  @media screen and (max-width: $breakpoint) {
     @content;
   }
 }
